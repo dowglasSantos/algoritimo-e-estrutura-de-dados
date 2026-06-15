@@ -1,15 +1,19 @@
 package org.example;
 
-import org.example.filafifo.FilaFIFO;
-import org.example.listaencadeada.ListaEncadeada;
-import org.example.pilha.Pilha;
+import org.example.desafio.Entity;
+import org.example.desafio.HashApp;
+import org.example.desafio.IHashApp;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Algoritimo e Estrutura de Dados");
-        Pilha pilha = new Pilha();
-        FilaFIFO fila = new FilaFIFO();
-        ListaEncadeada lista = new ListaEncadeada();
 
+        IHashApp<Integer, Entity> hashApp = new HashApp<>();
+
+        Entity entity = new Entity("Huemay");
+
+        hashApp.put(10, entity);
+
+        System.out.println("PUT: " + hashApp.get(10));
     }
 }
