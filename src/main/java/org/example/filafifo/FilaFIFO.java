@@ -27,6 +27,7 @@ public class FilaFIFO {
     public void dequeue() {
         if (posicao == 0) {
             System.out.println("Fila vazia");
+            return;
         }
 
         this.fila[this.posicao - 1] = null;
